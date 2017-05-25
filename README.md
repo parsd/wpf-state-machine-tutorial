@@ -14,9 +14,16 @@ The tutorial will use other projects/libraries:
 * [Graphviz](https://github.com/ellson/graphviz) to visualize the state machine
 * [Inkscape](https://inkscape.org) to create vector graphics for XAML
 * [OpenCover](https://github.com/OpenCover/opencover) for coverage extraction
-* [PlantUML](https://github.com/plantuml/plantuml)
+* [PlantUML](https://github.com/plantuml/plantuml) to generate UML diagrams
 * [ReportGenerator](https://github.com/danielpalme/ReportGenerator) to visualize _OpenCover_'s results
 * [Sphinx](https://github.com/sphinx-doc/sphinx) for generating comprehensive documentation
+
+and of course
+
+* [Visual Studio](https://www.visualstudio.com) (for example the Community edition)
+* [Git for Windows](https://git-scm.com/download/win) for version control
+* and maybe [Visual Studio Code](https://code.visualstudio.com/) for other editing purposes
+* and to simplify GitHub access [GitHub Desktop](https://desktop.github.com/)
 
 # License
 The content of the documentation is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/) and the underlying documentation and tutorial source code is licensed under the [MIT license](https://opensource.org/licenses/mit-license.php). These license terms do not apply to the used third party libraries or tools.
