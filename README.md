@@ -1,4 +1,6 @@
 # WPF State Machine Tutorial
+[![Build status](https://ci.appveyor.com/api/projects/status/s8xeie2h882oqiih/branch/master?svg=true)](https://ci.appveyor.com/project/parsd/wpf-state-machine-tutorial/branch/master)
+
 This is an advanced tutorial on writing a classic Windows desktop app based on a state machine. While creating the app we will use a continuous integration pipeline which will be evolved to continuous delivery.
 
 ## Referenced Projects
