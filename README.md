@@ -28,4 +28,4 @@ and of course
 * and to simplify GitHub access [GitHub Desktop](https://desktop.github.com/)
 
 # License
-The content of the documentation is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/) and the underlying documentation and tutorial source code is licensed under the [MIT license](https://opensource.org/licenses/mit-license.php). These license terms do not apply to the used third party libraries or tools.
+The content of the documentation is licensed under the [Creative Commons Attribution-ShareAlike 3.0 Germany license](https://creativecommons.org/licenses/by-sa/3.0/de/deed.en) and the underlying documentation and tutorial source code is licensed under the [MIT license](https://opensource.org/licenses/mit-license.php). These license terms do not apply to the used third party libraries or tools.
