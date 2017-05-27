@@ -7,6 +7,7 @@ WPF State Machine Tutorial
    :maxdepth: 2
    :caption: Contents:
 
+   goal
    prerequisites
    setup
 

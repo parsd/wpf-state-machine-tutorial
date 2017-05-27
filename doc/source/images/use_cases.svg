@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   contentScriptType="application/ecmascript"
+   contentStyleType="text/css"
+   height="260px"
+   preserveAspectRatio="none"
+   style="width:271px;height:260px;"
+   version="1.1"
+   viewBox="0 0 271 260"
+   width="271px"
+   zoomAndPan="magnify"
+   id="svg49"
+   sodipodi:docname="use_cases.svg"
+   inkscape:version="0.92.0 r15299">
+  <metadata
+     id="metadata53">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2560"
+     inkscape:window-height="1315"
+     id="namedview51"
+     showgrid="false"
+     inkscape:zoom="3.6307692"
+     inkscape:cx="71.216113"
+     inkscape:cy="121.1464"
+     inkscape:window-x="-13"
+     inkscape:window-y="-13"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg49" />
+  <defs
+     id="defs11">
+    <filter
+       height="300%"
+       id="f1b4jk6egvs48e"
+       width="300%"
+       x="-1"
+       y="-1">
+      <feGaussianBlur
+         result="blurOut"
+         stdDeviation="2.0"
+         id="feGaussianBlur2" />
+      <feColorMatrix
+         in="blurOut"
+         result="blurOut2"
+         type="matrix"
+         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"
+         id="feColorMatrix4" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         in="blurOut2"
+         result="blurOut3"
+         id="feOffset6" />
+      <feBlend
+         in="SourceGraphic"
+         in2="blurOut3"
+         mode="normal"
+         id="feBlend8" />
+    </filter>
+  </defs>
+  <circle
+     r="8"
+     id="ellipse13"
+     style="fill:#ffffff;stroke:#2980b9;stroke-width:2;filter:url(#f1b4jk6egvs48e);stroke-opacity:1"
+     cy="97"
+     cx="22" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path15"
+     style="fill:#2980b9;stroke:#2980b9;stroke-width:2;filter:url(#f1b4jk6egvs48e);fill-opacity:1;opacity:1;stroke-opacity:1"
+     d="m 22,105 v 27 M 9,113 H 35 M 22,132 9,147 m 13,-15 13,15" />
+  <text
+     style="font-size:14px;font-family:sans-serif;fill:#000000"
+     id="text17"
+     y="166.9951"
+     x="6"
+     textLength="32"
+     lengthAdjust="spacingAndGlyphs"
+     font-size="14">User</text>
+  <ellipse
+     id="ellipse19"
+     style="fill:#ffffff;stroke:#2980b9;stroke-width:1.5;filter:url(#f1b4jk6egvs48e);stroke-opacity:1"
+     ry="14.92"
+     rx="62.600101"
+     cy="23.42"
+     cx="181.1001" />
+  <text
+     style="font-size:14px;font-family:sans-serif;fill:#000000"
+     id="text21"
+     y="28.068501"
+     x="137.6001"
+     textLength="87"
+     lengthAdjust="spacingAndGlyphs"
+     font-size="14">Load images</text>
+  <ellipse
+     id="ellipse23"
+     style="fill:#ffffff;stroke:#2980b9;stroke-width:1.5;filter:url(#f1b4jk6egvs48e);stroke-opacity:1"
+     ry="19.0261"
+     rx="83.130699"
+     cy="92.5261"
+     cx="181.13071" />
+  <text
+     style="font-size:14px;font-family:sans-serif;fill:#000000"
+     id="text25"
+     y="97.174599"
+     x="112.1307"
+     textLength="138"
+     lengthAdjust="spacingAndGlyphs"
+     font-size="14">Configure animation</text>
+  <ellipse
+     id="ellipse27"
+     style="fill:#ffffff;stroke:#2980b9;stroke-width:1.5;filter:url(#f1b4jk6egvs48e);stroke-opacity:1"
+     ry="17.8377"
+     rx="77.1884"
+     cy="164.33771"
+     cx="181.1884" />
+  <text
+     style="font-size:14px;font-family:sans-serif;fill:#000000"
+     id="text29"
+     y="168.9861"
+     x="119.1884"
+     textLength="124"
+     lengthAdjust="spacingAndGlyphs"
+     font-size="14">Preview animation</text>
+  <ellipse
+     id="ellipse31"
+     style="fill:#ffffff;stroke:#2980b9;stroke-width:1.5;filter:url(#f1b4jk6egvs48e);stroke-opacity:1"
+     ry="17.5879"
+     rx="75.939499"
+     cy="235.58791"
+     cx="180.9395" />
+  <text
+     style="font-size:14px;font-family:sans-serif;fill:#000000"
+     id="text33"
+     y="240.2363"
+     x="120.4395"
+     textLength="121"
+     lengthAdjust="spacingAndGlyphs"
+     font-size="14">Save animated gif</text>
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#2980b9;stroke-width:1;stroke-opacity:1"
+     id="User-Load images"
+     d="M 38.0257,110.182 C 52.1099,93.987 74.4715,70.647 98,55.5 109.57,48.051 123.147,41.884 135.886,37.017" />
+  <polygon
+     id="polygon36"
+     style="fill:#2980b9;stroke:#2980b9;stroke-width:1;stroke-opacity:1;fill-opacity:1"
+     points="136.2221,36.8923 133.8689,42.0365 140.908,35.148 131.078,34.5391 " />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#2980b9;stroke-width:1;stroke-opacity:1"
+     id="User-Configure animation"
+     d="M 38.0538,125.048 C 56.1919,120.889 87.828,113.635 116.637,107.029" />
+  <polygon
+     id="polygon39"
+     style="fill:#2980b9;stroke:#2980b9;stroke-width:1;stroke-opacity:1;fill-opacity:1"
+     points="116.7314,107.0073 113.7264,111.8 121.605,105.89 111.9387,104.0023 " />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#2980b9;stroke-width:1;stroke-opacity:1"
+     id="User-Preview animation"
+     d="m 38.0538,131.952 c 18.8637,4.325 52.3267,11.998 82.0252,18.808" />
+  <polygon
+     id="polygon42"
+     style="fill:#2980b9;stroke:#2980b9;stroke-width:1;stroke-opacity:1;fill-opacity:1"
+     points="120.3184,150.816 115.5259,153.8213 125.192,151.933 117.3131,146.0235 " />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#2980b9;stroke-width:1;stroke-opacity:1"
+     id="User-Save animated gif"
+     d="M 38.2738,146.061 C 52.525,161.6409 74.9924,184.2331 98,199.5 c 11.094,7.3613 23.941,13.826 36.127,19.1702" />
+  <polygon
+     id="polygon45"
+     style="fill:#2980b9;stroke:#2980b9;stroke-width:1;stroke-opacity:1;fill-opacity:1"
+     points="134.3453,218.7644 129.0909,220.8598 138.939,220.7387 132.2498,213.5099 " />
+</svg>
