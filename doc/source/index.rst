@@ -8,6 +8,7 @@ WPF State Machine Tutorial
    :caption: Contents:
 
    goal
+   plan
    prerequisites
    setup
 

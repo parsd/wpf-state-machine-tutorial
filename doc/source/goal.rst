@@ -12,14 +12,16 @@ This revelation is now a few years old and back then animated GIFs had the air o
 
    Use case diagram for our GIF creator\ [#uc-src]_
 
-Ok, that doesn't sound too bad. But … is it sensible to be able to load new images while we save the new GIF? Lets put everything in an activity diagram to give it some structure. And also we want to be more specific with the *Configure animation* use case:
+Ok, that doesn't look too bad. If we want to create an animated GIF we first need some images. And we need to bring them in a certain order so the animation makes sense. Also the speed of the animation is important and if it should repeat itself. After we settled on all of this, our configuration is done and we want to preview our work. And finally we want to save the product of our work.
+
+But … is it sensible to be able to load new images while we save the new GIF? Lets put everything in an activity diagram to give it some structure. And also we want to be more specific with the *Configure animation* use case as hinted above:
 
 .. figure:: /images/activities.svg
    :align: center
 
    Activity diagram for our GIF creator\ [#activity-src]_
 
-I split the *Configure animation* use case into *configure speed*, *configure repeats*, and *reorder images* (if possible) activities. Also I partitioned the activities into three groups:
+I split the *Configure animation* use case into *configure speed*, *configure repeats*, and *reorder images* (if possible) activities. Also I partitioned the activities into three groups (which nearly resemble the use cases):
 
 Configuration
    Enables the user to provide the data and arrange it according to her wishes.
@@ -30,7 +32,7 @@ Preview
 Saving
    Finally store the fruits of the user's work.
 
-The title of this tuturial spoils it a bit, but these sections will become the states of our state machine ☺. I also kept the diagram relatively simple for this tutorial. Normally there would also be a repeat after the *Preview* section back to the *Configuration* section. Program exit is also possible everywhere.
+The title of this tuturial spoils it a bit, but these sections will become the states of our state machine ☺. I also kept the diagram relatively simple for this tutorial. Normally there would also be a repeat after the *Preview* section back to the *Configuration* section if we are not happy with the preview. Program exit is also possible everywhere. And what about errors …? Nah, nothing will ever go wrong! ☺
 
 .. rubric:: Footnotes
 
