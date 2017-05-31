@@ -23,8 +23,22 @@ What not to Achieve
 
 |yinyang|
 
-
 In :doc:`goal` we talked about what we want to achieve – and when. But a good programmer should be an optimistic pessimist, a good natured realist. A pure optimist will produce an app with a very narrow happy path. A pure pessimist wouldn’t get anything done; and if it got done, it would be dull. Now we swap our hats and think about what could go wrong.
+
+What definetly shouldn't happen is that the app crashes when it hits a bump. Also mutating into a zombi on a hickup is also a no no. Off the top of my head, I can think of the following undesirables:
+
+* File not found
+* File not an image
+* Image has differing size
+* Save location is not writable
+* Save location has not enough disk space
+* Out of memory (tough)
+
+After this quick brain storming session we can prepare and incorporate failure into our design!
+
+Models
+======
+
 
 .. |br| raw:: html
 
