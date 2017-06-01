@@ -16,10 +16,10 @@ So let's make one. First on the meta layer we want to create a solid_, MVVM_ str
 
 .. _behaviors: https://en.wikipedia.org/wiki/Behavior-driven_development
 
-As we have no customer waiting and the GUI is not that important, we can be relaxed and build the app from the bottom up. So we safe the time to create a visual prototype. Thus, let’s focus on the models – where the actual work is done!
+As we have no customer waiting and the GUI is not that important, we can be relaxed and build the app from the bottom up. So we safe the time to create a visual prototype. Thus, let’s focus first on the models – where the actual work is done!
 
-What not to Achieve
-===================
+Interlude: What not to Achieve
+==============================
 
 |yinyang|
 
@@ -39,6 +39,54 @@ After this quick brain storming session we can prepare and incorporate failure i
 Models
 ======
 
+.. figure:: /images/model_overview.svg
+   :align: center
+
+   Overview class diagram for our models\ [#model-cd]_
+
+All of the above classes and namespaces except ``Stateless`` reside in the ``WpfStateMachineTutorial`` namespace. Our main class is ``GifCreator`` which also owns via associations the three state objects. Only the ``ConfigState`` is special as this is aggregated via its interface. I left the application namespace and the state associations out of the diagram to keep it readable. I also renamed the **Saving** group from the activities into ``Serialization`` (more programmer dialect). There will be more classes and interfaces in the end, but this should suffice to get started.
+
+.. rubric:: Footnotes
+
+.. [#model-cd] PlantUML_ source code for model overview class diagram:
+
+   .. code-block:: doscon
+
+      @startuml
+
+      class GifCreator
+
+      class Stateless.StateMachine<TState, TTrigger>
+
+      interface IState <<interface>>
+
+      interface Configuration.IConfig <<interface>>
+      class Configuration.ConfigState
+
+      class Preview.PlayerState
+
+      class Serialization.AnimatedGifWriter
+      class Serialization.WriterState
+
+      Configuration.IConfig <|-- Configuration.ConfigState
+
+      Serialization.WriterState o-- "1" Serialization.AnimatedGifWriter
+
+      GifCreator o-- "1" Configuration.IConfig
+      GifCreator o-- "1" Stateless.StateMachine
+      GifCreator o-right- IState : current
+      (GifCreator, IState) . Stateless.StateMachine
+
+      IState <|-up- Configuration.ConfigState
+      IState <|-- Serialization.WriterState
+      IState <|-right- Preview.PlayerState
+
+      hide empty members
+      hide class circle
+      hide interface circle
+      @enduml
+
+.. _PlantUML: http://plantuml.com/
 
 .. |br| raw:: html
 
