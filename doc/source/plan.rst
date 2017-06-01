@@ -25,6 +25,11 @@ Interlude: What not to Achieve
 
 In :doc:`goal` we talked about what we want to achieve – and when. But a good programmer should be an optimistic pessimist, a good natured realist. A pure optimist will produce an app with a very narrow happy path. A pure pessimist wouldn’t get anything done; and if it got done, it would be dull. Now we swap our hats and think about what could go wrong.
 
+.. epigraph::
+
+   Nobody Expects the Spanish Inquisition |br|
+   -- Monty Python’s Flying Circus, Season 2 Episode 2
+
 What definetly shouldn't happen is that the app crashes when it hits a bump. Also mutating into a zombi on a hickup is also a no no. Off the top of my head, I can think of the following undesirables:
 
 * File not found
@@ -45,6 +50,24 @@ Models
    Overview class diagram for our models\ [#model-cd]_
 
 All of the above classes and namespaces except ``Stateless`` reside in the ``WpfStateMachineTutorial`` namespace. Our main class is ``GifCreator`` which also owns via associations the three state objects. Only the ``ConfigState`` is special as this is aggregated via its interface. I left the application namespace and the state associations out of the diagram to keep it readable. I also renamed the **Saving** group from the activities into ``Serialization`` (more programmer dialect). There will be more classes and interfaces in the end, but this should suffice to get started.
+
+But why …?
+----------
+
+… did I what I did? Let's start abstract:
+
+First
+   I am always strongly voting for the model layer to be self-sufficient. So it doesn't matter whether we want to use it in a command line tool, a GUI or on the server to drive some web-site.
+
+   I used namespace to seperate our three major use cases.
+
+Second
+   If you look at the typical Stateless_ examples, they set up the state machine quite differently.
+
+Third
+   You need to have third, don't you? Ok, if you insist: this is solid_ LoD_ as far as interpret it.
+
+.. _LoD: https://en.wikipedia.org/wiki/Law_of_Demeter
 
 .. rubric:: Footnotes
 
@@ -87,6 +110,8 @@ All of the above classes and namespaces except ``Stateless`` reside in the ``Wpf
       @enduml
 
 .. _PlantUML: http://plantuml.com/
+
+.. _Stateless: https://github.com/dotnet-state-machine/stateless
 
 .. |br| raw:: html
 
