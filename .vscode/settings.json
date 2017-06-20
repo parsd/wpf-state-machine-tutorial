@@ -1,0 +1,18 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+  "editor.insertSpaces": true,
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 110,
+  "editor.rulers": [ 110 ],
+  "files.exclude": {
+    "**/.git": true,
+    "**/.vs": true,
+    "bin": true,
+    "doc/build": true,
+    "doc/Makefile": true,
+    "doc/make.bat": true,
+    "doc/source/_*": true,
+    "obj": true,
+    "**/.DS_Store": true
+  }
+}

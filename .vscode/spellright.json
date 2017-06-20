@@ -1,0 +1,34 @@
+//
+// Spell Right workspace configuration file.
+//
+{
+    "language": "en",
+    "documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext",
+        "restructuredtext"
+    ],
+    "groupDictionaries": true,
+    "statusBarIndicator": true,
+    "suggestionsInHints": true,
+    "ignoreWords": [
+        "|br|",
+        "svg",
+        "doscon",
+        "@startuml",
+        "@enduml",
+        "endif",
+        "toctree",
+        "maxdepth",
+        "Config",
+        "kbd",
+        "menuselection",
+        "src"
+    ],
+    "ignoreRegExps": [],
+    "ignoreFiles": [
+        "**/.gitignore",
+        "**/.spellignore"
+    ]
+}

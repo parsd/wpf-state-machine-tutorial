@@ -30,7 +30,7 @@ In :doc:`goal` we talked about what we want to achieve – and when. But a good 
    Nobody Expects the Spanish Inquisition |br|
    -- Monty Python’s Flying Circus, Season 2 Episode 2
 
-What definetly shouldn't happen is that the app crashes when it hits a bump. Also mutating into a zombi on a hickup is also a no no. Off the top of my head, I can think of the following undesirables:
+What definitely shouldn't happen is that the app crashes when it hits a bump. Also mutating into a zombie on a hiccup is also a no no. Off the top of my head, I can think of the following undesirables:
 
 * File not found
 * File not an image
@@ -59,7 +59,7 @@ But why …?
 First
    I am always strongly voting for the model layer to be self-sufficient. So it doesn't matter whether we want to use it in a command line tool, a GUI or on the server to drive some web-site.
 
-   I used namespace to seperate our three major use cases.
+   I used namespaces to separate our three major use cases.
 
 Second
    If you look at the typical Stateless_ examples, they set up the state machine quite differently.

@@ -14,7 +14,7 @@ Next select the newly created folder and then :kbd:`Shift+Right-Click` it to ope
 
 :menuselection:`Open Command Prompt here`
 
-Now we can start the Sphinx quickstart wizard:
+Now we can start the Sphinx quick start wizard:
 
 .. code-block:: doscon
 
