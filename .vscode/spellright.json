@@ -7,7 +7,7 @@
         "markdown",
         "latex",
         "plaintext",
-        "restructuredtext"
+        "reStructuredText"
     ],
     "groupDictionaries": true,
     "statusBarIndicator": true,
