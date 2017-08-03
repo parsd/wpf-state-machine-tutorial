@@ -12,20 +12,6 @@
     "groupDictionaries": true,
     "statusBarIndicator": true,
     "suggestionsInHints": true,
-    "ignoreWords": [
-        "|br|",
-        "svg",
-        "doscon",
-        "@startuml",
-        "@enduml",
-        "endif",
-        "toctree",
-        "maxdepth",
-        "Config",
-        "kbd",
-        "menuselection",
-        "src"
-    ],
     "ignoreRegExps": [],
     "ignoreFiles": [
         "**/.gitignore",
