@@ -287,5 +287,11 @@ __pycache__/
 *.odx.cs
 *.xsd.cs
 
+# Python vscode tags
+.vscode/tags
+
 # Sphinx build output
 doc/build/*/
+
+# NUnit auto-downloaded file
+TestStateMachineTutorial/Program.vb
