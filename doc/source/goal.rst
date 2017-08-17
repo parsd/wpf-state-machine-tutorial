@@ -32,7 +32,7 @@ Preview
 Saving
    Finally store the fruits of the user's work.
 
-The title of this tutorial spoils it a bit, but these sections will become the states of our state machine ☺. I also kept the diagram relatively simple for this tutorial. Normally there would also be a repeat after the *Preview* section back to the *Configuration* section if we are not happy with the preview. Program exit is also possible everywhere. And what about errors …? Nah, nothing will ever go wrong! ☺
+The title of this tutorial spoils it a bit, but these sections will become the states of our state machine. I also kept the diagram relatively simple for this tutorial. Normally there would also be a repeat after the *Preview* section back to the *Configuration* section if we are not happy with the preview. Program exit is also possible everywhere. And what about errors …? Nah, nothing will ever go wrong! ☺
 
 .. rubric:: Footnotes
 

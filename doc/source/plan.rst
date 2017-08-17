@@ -52,20 +52,24 @@ Models
 All of the above classes and namespaces except ``Stateless`` reside in the ``WpfStateMachineTutorial`` namespace. Our main class is ``GifCreator`` which also owns via associations the three state objects. Only the ``ConfigState`` is special as this is aggregated via its interface. I left the application namespace and the state associations out of the diagram to keep it readable. I also renamed the **Saving** group from the activities into ``Serialization`` (more programmer dialect). There will be more classes and interfaces in the end, but this should suffice to get started.
 
 But why …?
-----------
+------------
 
 … did I what I did? Let's start abstract:
 
 First
-   I am always strongly voting for the model layer to be self-sufficient. So it doesn't matter whether we want to use it in a command line tool, a GUI or on the server to drive some web-site.
+   I am always strongly voting for the model layer to be self-sufficient. So it doesn't matter whether we want to use it in a command line tool, a GUI or on the server to drive some web-site. And as stated above, we postpone the work on the UI related parts.
 
-   I used namespaces to separate our three major use cases.
+   I used namespaces to separate our three major use cases. This is to separate the concerns on a high level, which enables us to quickly find and place functionality. Putting everything in namespaces like ``Model``, ``View`` or ``ViewModel`` is good for SDKs related to building GUIs, but not for the application. I prefer to put patterns or roles in the type names.
 
 Second
-   If you look at the typical Stateless_ examples, they set up the state machine quite differently.
+   If you look at the typical Stateless_ examples, they set up the state machine quite differently from what I plan to do. In our app we have different states and not all data is valid in each state. With the typical enumeration based approach we need to guard data that is invalid in certain states (reading from/writing to such an attribute should throw an exception). But if we use different types that only consist of the valid data, we safe us and our users some work.
+
+   What we will implement here is the 'C#isation' of a state machine implementation with a C++ variant_. This then brings us back to 'make fewer mistakes'.
+
+.. _variant: https://www.youtube.com/watch?v=ojZbFIQSdl8&t=810s
 
 Third
-   You need to have third, don't you? Ok, if you insist: this is solid_ LoD_ as far as interpret it.
+   You need to have third, don't you? Ok, if you insist: this is solid_ LoD_ as far as I interpret it. The states deliver the necessary data in their transitions and thus only talk with their direct neighbors. Also we can later associate one view model with one state.
 
 .. _LoD: https://en.wikipedia.org/wiki/Law_of_Demeter
 
