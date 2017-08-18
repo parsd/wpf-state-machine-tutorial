@@ -34,6 +34,7 @@ and of course
 
 * [Visual Studio](https://www.visualstudio.com) (for example the Community edition)
 * [Git for Windows](https://git-scm.com/download/win) for version control
+* [Python](https://python.org) for documentation
 * and maybe [Visual Studio Code](https://code.visualstudio.com/) for other editing purposes
 * and to simplify GitHub access [GitHub Desktop](https://desktop.github.com/)
 
