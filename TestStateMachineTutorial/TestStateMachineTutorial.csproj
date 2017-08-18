@@ -56,9 +56,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Program.vb" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\WpfStateMachineTutorial.csproj">
       <Project>{38d4f20e-e240-4908-8c81-98d3e1f3839f}</Project>
       <Name>WpfStateMachineTutorial</Name>

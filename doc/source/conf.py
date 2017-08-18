@@ -46,7 +46,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'Wpf State Machine Tutorial'
+project = 'WPF State Machine Tutorial'
 copyright = '2017, Sascha Dorenbeck'
 author = 'Sascha Dorenbeck'
 
