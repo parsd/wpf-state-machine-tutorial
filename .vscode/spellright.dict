@@ -11,3 +11,9 @@ kbd
 menuselection
 src
 guilabel
+cmd
+br
+markdownlint
+pylint
+restructuredtext
+autobuild

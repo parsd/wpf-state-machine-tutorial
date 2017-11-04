@@ -11,6 +11,7 @@ WPF State Machine Tutorial
    plan
    prerequisites
    setup
+   getstarted
 
 
 

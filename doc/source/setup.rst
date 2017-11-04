@@ -66,7 +66,7 @@ Now we can start the Sphinx quick start wizard:
 
 .. code-block:: doscon
 
-   $ sphinx-quickstart
+   > sphinx-quickstart
 
 The wizard will guide you through you project creation. The value in square brackets is the default which you can simply accept by typing :kbd:`Enter`. Configure your project like this (I omitted the explainatory texts):
 
@@ -134,7 +134,7 @@ Finally we test our newly created documentation project by reusing the *Command 
 
 .. code-block:: doscon
 
-   $ make html
+   > make html
 
    [...]
    build succeeded.
@@ -163,6 +163,6 @@ With this change we can again stage and commit all listed files.
 
    .. code-block:: doscon
 
-      $ .\make.bat html
+      > .\make.bat html
 
    *Hint:* simply type :kbd:`m` and then :kbd:`Tab` and *PowerShell* will expand it to ``.\make.bat``.

@@ -4,6 +4,7 @@
   "editor.wordWrap": "bounded",
   "editor.wordWrapColumn": 110,
   "editor.rulers": [ 110 ],
+  "editor.tabSize": 3,
   "files.exclude": {
     "**/.git": true,
     "**/.vs": true,
@@ -14,5 +15,13 @@
     "doc/source/_*": true,
     "obj": true,
     "**/.DS_Store": true
-  }
+  },
+  "spellright.language": "en",
+  "spellright.groupDictionaries": true,
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext",
+    "restructuredtext"
+  ]
 }
