@@ -50,7 +50,7 @@ Here we need to start bottom up with the ``Frame``\ [#Source]_. The test driven 
 
 1. Create a ``FrameTest`` class in the *TestStateMachineTutorial* project
 2. Add a ``.CreateAndDispose()`` test method to it
-3. Create a test image
+3. Create a test image (for that we need to reference the *System.Drawing* assembly in both projects)
 4. Call the Frame constructor with a chosen ``TimeSpan`` and the test image
 5. As now compilation fails, create the ``Frame`` class in the *WpfStateMachineTutorial* project with the wanted constructor
 6. Test that the test image is stored in the ``.Image`` property
