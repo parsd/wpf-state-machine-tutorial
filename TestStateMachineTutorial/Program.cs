@@ -1,5 +1,5 @@
-﻿// ***********************************************************************
-// Copyright (c) 2015 Charlie Poole
+// ***********************************************************************
+// Copyright (c) 2015 Charlie Poole, Rob Prouse
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the
@@ -25,17 +25,17 @@ using NUnitLite;
 
 namespace NUnitLite.Tests
 {
-  public class Program
-  {
-    /// <summary>
-    /// The main program executes the tests. Output may be routed to
-    /// various locations, depending on the arguments passed.
-    /// </summary>
-    /// <remarks>Run with --help for a full list of arguments supported</remarks>
-    /// <param name="args"></param>
-    public static int Main(string[] args)
+    public class Program
     {
-      return new AutoRun().Execute(args);
+        /// <summary>
+        /// The main program executes the tests. Output may be routed to
+        /// various locations, depending on the arguments passed.
+        /// </summary>
+        /// <remarks>Run with --help for a full list of arguments supported</remarks>
+        /// <param name="args"></param>
+        public static int Main(string[] args)
+        {
+            return new AutoRun().Execute(args);
+        }
     }
-  }
 }

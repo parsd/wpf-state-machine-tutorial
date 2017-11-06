@@ -292,6 +292,3 @@ __pycache__/
 
 # Sphinx build output
 doc/build/*/
-
-# NUnit auto-downloaded file
-TestStateMachineTutorial/Program.vb
