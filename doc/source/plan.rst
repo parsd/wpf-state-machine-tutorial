@@ -23,14 +23,19 @@ Interlude: What not to Achieve
 
 |yinyang|
 
-In :doc:`goal` we talked about what we want to achieve – and when. But a good programmer should be an optimistic pessimist, a good natured realist. A pure optimist will produce an app with a very narrow happy path. A pure pessimist wouldn’t get anything done; and if it got done, it would be dull. Now we swap our hats and think about what could go wrong.
+In :doc:`goal` we talked about what we want to achieve – and when. But a good programmer should be an optimistic pessimist, a good natured realist. A pure optimist will produce an app with a very narrow happy path. A pure pessimist wouldn’t get anything done; and if it got done, it would be dull.
+
+We just want to write an app that simply creates animated GIFs -- nothing more. So we don't want image editing capabilities and to keep it simple no undo stack. Often programmers want to put too much in an app, which then does a lot of things … not so well. Also this often hides the idea behind the app and hinders the work flow. Think of browsers: they are our new operating systems. But you only see an address box a few buttons and a burger menu when you start.
+
+The Law of Murphy
+=================
 
 .. epigraph::
 
-   Nobody Expects the Spanish Inquisition |br|
-   -- Monty Python’s Flying Circus, Season 2 Episode 2
+   Anything that can go wrong will go wrong |br|
+   -- Edward A. Murphy jr.
 
-What definitely shouldn't happen is that the app crashes when it hits a bump. Also mutating into a zombie on a hiccup is also a no no. Off the top of my head, I can think of the following undesirables:
+Now we swap our hats and think about what could go wrong: What definitely shouldn't happen is that the app crashes when it hits a bump. Also mutating into a zombie on a hiccup is also a no no. Off the top of my head, I can think of the following undesirables:
 
 * File not found
 * File not an image
@@ -39,7 +44,7 @@ What definitely shouldn't happen is that the app crashes when it hits a bump. Al
 * Save location has not enough disk space
 * Out of memory (tough)
 
-After this quick brain storming session we can prepare and incorporate failure into our design!
+After this quick brain storming session we can prepare and incorporate failure into our implementation!
 
 Models
 ======
@@ -49,7 +54,7 @@ Models
 
    Overview class diagram for our models\ [#model-cd]_
 
-All of the above classes and namespaces except ``Stateless`` reside in the ``WpfStateMachineTutorial`` namespace. Our main class is ``GifCreator`` which also owns via associations the three state objects. Only the ``ConfigState`` is special as this is aggregated via its interface. I left the application namespace and the state associations out of the diagram to keep it readable. I also renamed the **Saving** group from the activities into ``Serialization`` (more programmer dialect). There will be more classes and interfaces in the end, but this should suffice to get started.
+All of the above classes and namespaces except ``Stateless`` reside in the ``WpfStateMachineTutorial`` namespace. Our main class is ``GifCreator`` which also owns via associations the three state objects. To keep the diagram readable I left out the aggregation of the three state types by the ``StateMachine<TState,TTrigger>``. Only the ``ConfigState`` is special as this is additionally aggregated via its interface. I omitted the application namespace for readability reasons. I also renamed the **Saving** group from the activities into ``Serialization`` (more programmer dialect). There will be more classes and interfaces in the end, but this should suffice to get started.
 
 But why …?
 ------------
@@ -69,9 +74,25 @@ Second
 .. _variant: https://www.youtube.com/watch?v=ojZbFIQSdl8&t=810s
 
 Third
-   You need to have third, don't you? Ok, if you insist: this is solid_ LoD_ as far as I interpret it. The states deliver the necessary data in their transitions and thus only talk with their direct neighbors. Also we can later associate one view model with one state.
+   You need to have third, don't you? Ok, if you insist: I try to have flat class hierarchies. Deep hierarchies yield more rigid, hard to understand code and introduce more work for us to do if we need to derive a new type. Also we always must keep to Liskov substitution principle\ [#liskov]_ to not surprise us in the future. Also deep hierarchies make it hard to achieve the open-closed principle. And you don't need to derive a type to achieve openness to changes; it is just one option.
 
 .. _LoD: https://en.wikipedia.org/wiki/Law_of_Demeter
+
+State Machine
+~~~~~~~~~~~~~
+
+Now lets be more concrete: first why did I use a state machine library (*Stateless*) and thus state machines at all? In our case the activity diagram showed that we have three major states our app can be in. Using a state machine conveys that idea directly in code. Every state takes its responsibility and only has its necessary data and operations (separation of concerns).
+
+Isn't using extra state types overly complicated? I need the right type to access my data … Exactly that's why. We use the type system to protect us from mistakes -- force us to think about our actions. And reduces the amount of checks we have to write.
+
+Often state machines live hidden in the code making it hard to understand why some operations are currently not possible. Also the state transitions are spread over a large area. This gives us more opportunity to make mistakes. And as I state above: I am lazy -- here I invest a little more work to keep me from doing much, much more work in the end.
+
+Use of the Interfaces ``IState`` and ``IConfig``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The reason behind ``IState`` is quickly explained: it is simply there to give the three state objects its role in our app. ``IConfig`` grants the read only interface to the ``ConfigState`` used all over our app. Changes are only permitted if the app is in the ``ConfigState``.
+
+I don't use much more interfaces as dependency inversion can also be achieved by other means. We will see that in the implementation sections. There are similar options available as with the open-closed principle.
 
 .. rubric:: Footnotes
 
@@ -111,11 +132,14 @@ Third
       hide empty members
       hide class circle
       hide interface circle
+
       @enduml
 
 .. _PlantUML: http://plantuml.com/
 
 .. _Stateless: https://github.com/dotnet-state-machine/stateless
+
+.. [#liskov] Liskov substitution principle put simply is that derived types are a base type: is-a relationship.
 
 .. |br| raw:: html
 

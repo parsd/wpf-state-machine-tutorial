@@ -32,7 +32,7 @@ Thanks to BumpKit_ we know what to code. So we can start writing our test right 
 
 .. _LINQPad: https://www.linqpad.net/
 
-At first we want to keep things simple and the restriction was equally sized (meaning *width* and *height*) images. Thus our ``AnimatedGifWriter`` needs to store a collection of ``Frame``\ s having the same size. Also these frames need a ``TimeSpan`` specifying how long this frame is to be displayed.
+At first we want to keep things simple and the restriction was equally sized (meaning *width* and *height*) images. Thus our ``AnimatedGifWriter`` needs to store a collection of ``Frame``\ s having the same size. Also these frames need a ``TimeSpan`` specifying how long this frame is to be displayed. As implied by my wording a ``Frame`` is a simple storage type: only properties and no actions (methods).
 
 .. code-block:: csharp
 
